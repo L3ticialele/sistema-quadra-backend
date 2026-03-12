@@ -15,8 +15,6 @@ Backend API for managing sports court reservations.
 The Court Reservation System API is a backend application designed to manage sports court bookings.  
 It allows users to create reservations, manage schedules, and control access using authentication and authorization.
 
-This project was developed as part of an academic software development project.
-
 ---
 
 ## ✨ Features
@@ -41,13 +39,12 @@ This project was developed as part of an academic software development project.
 
 ## 📂 Project Structure
 
-src/
-controllers/
-services/
-repositories/
-middlewares/
-routes/
-
+- src/
+- controllers/
+- services/
+- repositories/
+- middlewares/
+- routes/
 
 ---
 
