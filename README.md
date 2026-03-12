@@ -1,124 +1,91 @@
-# 🏖 Sistema de Agendamento - Dunas Beach (Backend)
+# 🏟️ Court Reservation System API
 
-API REST desenvolvida para gerenciamento de agendamentos de quadras esportivas, com autenticação JWT, controle de permissões por perfil de usuário e integração com PostgreSQL.
+![Node.js](https://img.shields.io/badge/Node.js-Backend-green?logo=node.js)
+![Express](https://img.shields.io/badge/Express.js-Backend-black?logo=express)
+![JavaScript](https://img.shields.io/badge/JavaScript-Language-yellow?logo=javascript)
+![MySQL](https://img.shields.io/badge/MySQL-Database-blue?logo=mysql)
+![JWT](https://img.shields.io/badge/Auth-JWT-orange)
 
-Este projeto foi construído com foco em organização arquitetural, segurança e boas práticas de versionamento.
-
----
-
-## 🚀 Tecnologias Utilizadas
-
-* Node.js
-* Express
-* PostgreSQL
-* JSON Web Token (JWT)
-* Dotenv
-* Arquitetura em camadas (Controllers, Services, Routes, Middlewares)
+Backend API for managing sports court reservations.
 
 ---
 
-## 🧠 Arquitetura
+## 📖 Overview
 
-O projeto segue o padrão de separação de responsabilidades:
+The Court Reservation System API is a backend application designed to manage sports court bookings.  
+It allows users to create reservations, manage schedules, and control access using authentication and authorization.
 
-* **Controllers** → Recebem requisições e retornam respostas
-* **Services** → Contêm a regra de negócio
-* **Routes** → Definição dos endpoints
-* **Middlewares** → Autenticação e controle de permissões
-
-Essa estrutura facilita manutenção, escalabilidade e testes.
+This project was developed as part of an academic software development project.
 
 ---
 
-## 🔐 Funcionalidades Implementadas
+## ✨ Features
 
-* Cadastro de usuários
-* Autenticação com geração de token JWT
-* Middleware de proteção de rotas
-* Controle de acesso baseado em perfil (ex: admin, operador)
-* CRUD de agendamentos
-* Relatórios com filtro por período
-* Uso de variáveis de ambiente para proteção do segredo JWT
+- 🔐 User authentication using JWT
+- 👥 Role-based access control
+- 📅 Create and manage court reservations
+- 🗂️ Manage users and schedules
+- 🌐 RESTful API design
 
 ---
 
-## 🗄 Banco de Dados
+## 🛠 Technologies
 
-Banco utilizado: **PostgreSQL**
-
-A aplicação realiza conexão com banco relacional para:
-
-* Armazenamento de usuários
-* Registro de agendamentos
-* Consulta de relatórios
+- JavaScript
+- Node.js
+- Express
+- MySQL
+- JWT Authentication
 
 ---
 
-## ⚙️ Como Executar o Projeto Localmente
+## 📂 Project Structure
 
-### 1️⃣ Clonar o repositório
+src/
+controllers/
+services/
+repositories/
+middlewares/
+routes/
 
-```bash
-git clone https://github.com/SEU_USUARIO/sistema-quadra-backend.git
-```
 
-### 2️⃣ Instalar dependências
+---
 
-```bash
+## 🔗 API Endpoints (Example)
+
+POST /login  
+GET /courts  
+POST /reservations  
+DELETE /reservations/:id  
+
+---
+
+## ▶️ How to Run
+
+1. Clone the repository
+
+git clone https://github.com/L3ticialele/sistema-quadra-backend
+
+2. Install dependencies
+
 npm install
-```
 
-### 3️⃣ Configurar variáveis de ambiente
+3. Configure the environment variables
 
-Crie um arquivo `.env` na raiz do projeto:
+4. Start the server
 
-```
-PORT=3000
-JWT_SECRET=sua_chave_secreta
-DATABASE_URL=sua_string_de_conexao_postgresql
-```
-
-### 4️⃣ Iniciar o servidor
-
-```bash
-npm run dev
-```
-
-Servidor rodando em:
-
-```
-http://localhost:3000
-```
+npm start
 
 ---
 
-## 📌 Endpoints Principais
+## 🚀 Future Improvements
 
-| Método | Rota          | Descrição                |
-| ------ | ------------- | ------------------------ |
-| POST   | /auth/login   | Autenticação de usuário  |
-| POST   | /usuarios     | Cadastro de usuário      |
-| GET    | /agendamentos | Listagem de agendamentos |
-| POST   | /agendamentos | Criação de agendamento   |
-
-*(Os endpoints protegidos exigem token JWT no header Authorization)*
+- Frontend interface
+- Reservation calendar view
+- Notification system
 
 ---
 
-## 📈 Diferenciais Técnicos
-
-* Organização profissional de commits (Conventional Commits)
-* Uso de branch `develop` para desenvolvimento
-* Controle de permissões baseado em roles
-* Separação clara entre camada de negócio e controle
-* Aplicação de boas práticas de segurança
-
----
-
-## 👩‍💻 Desenvolvido por
+## 👩‍💻 Author
 
 Letícia Ferreira Pinto
-* Estudante de Engenharia de Software - Una
-* Técnica em Informática - Cefet-MG
-
-Projeto desenvolvido com foco em aprendizado prático de backend, autenticação e organização arquitetural.
